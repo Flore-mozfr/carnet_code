@@ -202,7 +202,7 @@ class EmptyContentList(ContentList):
         for error in errors:
             self.append_error(error)
 
-@jinja2.contextfunction
+@jinja2.pass_context
 def render(context, content):
     """Render the content of the songbook as a LaTeX code.
 
@@ -238,7 +238,7 @@ def validate_parser_argument(raw_schema):
 
     Will raise `ContentError` if the schema is not respected.
     """
-    schema = Rx.make_schema(yaml.load(raw_schema))
+    schema = Rx.make_schema(yaml.safe_load(raw_schema))
 
     def wrap(parse):
         """Wrap the parse function"""
