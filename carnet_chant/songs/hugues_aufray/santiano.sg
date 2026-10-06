@@ -1,0 +1,59 @@
+\selectlanguage{french}
+\songcolumns{2}
+\beginsong{Santiano}
+  [by={Hugues Aufray}]
+
+  \gtab{Am}{X02210}
+  \gtab{G}{320003}
+  \gtab{Dm}{XX0231}
+  \gtab{Em}{022000}
+
+
+  \beginverse
+    C'est \[Am]{un fameux} trois mâts
+    Fin comme un oi\[G]seau
+    Hissez \[Am]{ho !} Santi\[G]ano !
+    \[Dm]{Dix-huit} nœuds, quatre-\[G]cents ton\[Em]neaux
+    Je suis \[Am]{fier d'y} \[Em]être \[Am]matelot
+  \endverse
+
+  \beginchorus
+    Tiens \[Am]{bon la} vague et tiens bon le \[G]vent
+    Hissez \[Am]{ho !} Santi\[G]ano !
+    \[Dm]Si Dieu veut, toujours \[G]droit de\[Em]vant
+    Nous ir\[Am]{ons jusqu'}\[Em]{à San} \[Am]Francisco
+  \endchorus
+
+  \beginverse
+    Je pars pour de longs mois
+    En laissant Margot
+    Hissez ho ! Santiano !
+    D'y penser, j'en ai le cœur gros
+    En doublant les feux de Saint-Malo
+  \endverse
+
+  \beginverse
+    On prétend que là-bas
+    L'argent coule à flot
+    Hissez ho ! Santiano !
+    On trouve l'or
+    Au fond des ruisseaux
+    J'en ramènerai plusieurs lingots
+  \endverse
+
+  \beginverse
+    Un jour, je reviendrai
+    Chargé de cadeaux
+    Hissez ho ! Santiano !
+    Au pays, j'irai voir Margot
+    À son doigt, je passerai l'anneau
+  \endverse
+
+  \beginchorus
+    Tiens bon le cap et tiens bon le flot
+    Hissez ho ! Santiano !
+    Sur la mer qui fait le gros dos
+    Nous irons jusqu'à San Francisco
+  \endchorus
+
+\endsong

@@ -1,0 +1,93 @@
+\selectlanguage{french}
+\songcolumns{2}
+\beginsong{L'Aziza}
+  [by={Daniel Balavoine}]
+
+  \capo{1}
+  \gtab{A}{X02220}
+  \gtab{D}{XX0232}
+  \gtab{G}{320003}
+  \gtab{Bm}{2:X02210}
+  \gtab{E}{022100}
+  \gtab*{Em7}{022030}
+  \gtab*{F#7}{2:020100}
+
+  \beginverse*
+    \musicnote{\nolyrics{\Intro : \[A D G A]} \rep{2}}
+  \endverse
+
+  \beginverse
+    \[A]Petite rue de \[D]Casbah
+    Au mi\[G]lieu de Ca\[A]sa
+    \begin{repeatedchords}
+      \[A]Petite brune en\[D]roulée d'un drap
+      Court au\[G]tour de moi\[A]
+    \end{repeatedchords}
+  \endverse
+
+  \begin{repeatedchords}
+    \beginverse*
+      \[A]Ses yeux remplis de \[D]pourquoi
+      Cherchent u\[G]ne réponse en \[A]moi
+      \[A]Elle veut vraiment que \[D]rien ne soit sûr
+      Dans tout \[G]ce qu'elle croit
+    \endverse
+  \end{repeatedchords}
+
+  \beginchorus
+    \echo{\[A]Oh oh oh oh oh}
+    \[A]Ta couleur et tes mots tout me \[Bm]va
+    Que tu \[G]vives ici ou là-\[A]bas
+    \nolyrics{\[G A]}
+    \[A]Danse avec \[Bm]moi
+    Si tu \[G]crois que ta vie est \[A]là
+    Ce n'est \[E]pas un problème pour \[Em7]moi, \[F#7]{oh oh}
+    L'Azi\[Bm]za, je te \[G]veux si tu veux de \[A]moi
+  \endchorus
+
+  \beginverse*
+    \musicnote{\nolyrics{\Bridge : \[A D G A]}}
+  \endverse
+
+  \begin{repeatedchords}
+    \beginverse
+      \[A]Et quand tu marches \[D]le soir
+      Ne \[G]trembles pas \[A]
+      \[A]Laisse glisser les \[D]mauvais regards
+      Qui \[G]pèsent sur toi \[A]
+    \endverse
+
+    \beginverse*
+      L'Aziza \[A]ton étoile jaune c'est \[D]ta peau
+      Tu n'as \[G]pas le choix \[A]
+      \[A]Ne la porte pas comme \[D]on porte un fardeau
+      Ta \[G]force c'est ton \[A]droit
+    \endverse
+  \end{repeatedchords}
+  \musicnote{\Chorus}
+
+  \beginverse*
+    \musicnote{\nolyrics{\Bridge : \[A D G A]} \rep{2}}
+  \endverse
+
+  \musicnote{\Solo}
+
+  \begin{bridge}
+    \[A]L'Azi\[Bm]za, ta cou\[G]leur tes mots tout me \[A]va
+    \nolyrics{\[G A]}
+    \[A]Danse avec \[Bm]moi
+    Que tu \[G]vives ici ou là-\[A]bas
+    Ce n'est \[E]pas un problème pour \[Em7]moi, \[F#7]{oh oh}
+    L'Azi\[Bm]za, je te \[G]veux si tu veux de \[A]moi
+    L'Azi\[Bm]za, si tu \[G]crois que ta vie est \[A]là
+    Il n'y \[E]a pas de loi contre \[Em7]ça, \[F#7]{oh oh}
+    L'Azi\[Bm]za, fille en\[G]fant du prophète \[A]roi
+  \end{bridge}
+
+  \beginverse*
+    \musicnote{\nolyrics{\Bridge : \[A D G A]}}
+  \endverse
+
+  \musicnote{\Chorus}
+
+\endsong
