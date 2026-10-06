@@ -1,1 +1,1 @@
-./songbook -v ./books/carnet.yaml
+songbook -v ./books/carnet.yaml
