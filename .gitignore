@@ -15,3 +15,5 @@ dist
 *.tar.gz
 .eggs
 .tox
+
+*.cache
