@@ -68,7 +68,7 @@ Les cases cochées indiquent les chants présents dans le dossier `songs/` de ce
 ## Chants un peu spi ?
 
 - [x] La prière scoute — Jacques Sevin (auteur)
-- [ ] Ne rentrez pas chez vous comme avant — Hubert Bourel et Marie-Louise Valentin
+- [x] Ne rentrez pas chez vous comme avant — Hubert Bourel et Marie-Louise Valentin
 - [ ] Jubilez criez de joie — Frère Jean-Baptiste du Jonchay (auteur)
 - [ ] Laudato Si — Patrick Richard (version « Sois loué, Dieu créateur » ; à confirmer)
 - [x] Que ma bouche chante ta louange — Communauté de l’Emmanuel
