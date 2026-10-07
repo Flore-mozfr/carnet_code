@@ -1,3 +1,0 @@
-{start_(( content.type ))}
-  ((- render(content.line) -))
-{end_(( content.type ))}

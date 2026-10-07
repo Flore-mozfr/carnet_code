@@ -1,5 +1,0 @@
-book:
-  template: default.tex
-  datadir:
-  - syntax_datadir
-  lang: en

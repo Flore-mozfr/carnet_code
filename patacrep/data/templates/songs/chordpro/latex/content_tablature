@@ -1,5 +1,0 @@
-\begin{verbatim}
-(* for content in content.content *)
-  ((- content ))
-(* endfor *)
-\end{verbatim}

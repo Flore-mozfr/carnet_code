@@ -1,4 +1,0 @@
-- ["directly", "a", "list"]
-- invalid_keyword: Test
-- section:
-    short: Missing name

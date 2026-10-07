@@ -1,6 +1,0 @@
-[
-    (*- for chord in content.chords -*)
-        (* if not loop.first *) (* endif -*)
-        (( render(chord) -))
-    (* endfor -*)
-]
