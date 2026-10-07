@@ -12,8 +12,11 @@ dist
 *.out
 *.pdf
 *.pyc
+*.fdb_latexmk
+*.fls
 *.tar.gz
 .eggs
 .tox
+.venv/
 
 *.cache

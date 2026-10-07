@@ -1,6 +1,6 @@
-PWD /home/romain/Documents/projets/carnet_code/carnet_chant/templates/songbook
+PWD /home/romain/Documents/projets/carnet_code/templates/songbook
 INPUT /var/lib/texmf/web2c/luahbtex/lualatex.fmt
-INPUT /home/romain/Documents/projets/carnet_code/carnet_chant/templates/songbook/data.tex
+INPUT /home/romain/Documents/projets/carnet_code/templates/songbook/data.tex
 OUTPUT data.log
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tex-ini-files/lualatexquotejobname.lua
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ltluatex.lua
