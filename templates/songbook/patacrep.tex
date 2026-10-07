@@ -28,7 +28,6 @@ schema:
     url: //str
     email: //str
     picture: //str
-    picturecopyright: //str
     footer: //str
     color:
       type: //rec
@@ -46,10 +45,9 @@ default:
   en:
     subtitle: ""
     version: ""
-    url: "http://www.patacrep.fr"
-    email: crep@team-on-fire.com
-    picture: img/treble_a
-    picturecopyright: "Dbolton \\url{http://commons.wikimedia.org/wiki/User:Dbolton}"
+    url: "https://www.sgdf.fr"
+    email: unemaildugroupe@sgdf.fr
+    picture: img/JB_gerland
     footer: "Generated using Songbook (\\url{http://www.patacrep.fr})"
     color:
       songlink: 4e9a06
@@ -58,8 +56,8 @@ default:
       songnumber: D1E4AE
       note: D1E4AE
       index: D1E4AE
-  fr:
-    footer: "Créé avec le programme Songbook (\\url{http://www.patacrep.fr})"
+  fr: {}
+#    footer: "Créé avec le programme Songbook (\\url{http://www.patacrep.fr})"
 description:
   en:
     subtitle: "Subtitle"
@@ -67,7 +65,6 @@ description:
     url: "Website"
     email: "Email"
     picture: "Cover picture"
-    picturecopyright: "Copyright for the cover picture"
     footer: "Footer"
     color:
       songlink: "Songlink color"
@@ -82,7 +79,6 @@ description:
     url: "Site web"
     email: "Adresse électronique"
     picture: "Image de couverture"
-    picturecopyright: "Copyright pour l'image de couverture"
     footer: "Pied de page"
     color:
       songlink: "Couleur des liens vers les chants"
@@ -143,9 +139,22 @@ description:
 (* if template_var.version -*)
     \version{(( template_var.version ))}
 (* endif *)
-\mail{(( template_var.email|escape_url ))}
+% \mail{(( template_var.email|escape_url ))}
+% Reprendre les informations de couverture avec la ligne du mail commentée.
+\makeatletter
+\def\@metainfos{%
+    \ialign{%
+        \bf{##} \hfil & ## \hfil \cr
+        \@insertelement{version}
+        \@insertelement{date}
+        \@insertelement{author}
+        \@insertelement{web}
+%        \@insertelement{mail}
+    }
+}
+\makeatother
 \web{(( template_var.url|escape_url ))}
 \picture{(( template_var.picture ))}
-\picturecopyright{(( template_var.picturecopyright ))}
-\footer{(( template_var.footer ))}
+% \footer{(( template_var.footer ))}
+\footer{}
 (* endblock *)
