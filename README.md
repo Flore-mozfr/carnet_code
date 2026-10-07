@@ -56,6 +56,17 @@ compatible :
 python -m pip install "setuptools==81.0.0"
 ```
 
+## Nommer les fichiers de chants
+
+Les fichiers de chants sont rangés dans `songs/`, par artiste. Utiliser des
+espaces entre les mots du nom de fichier, plutôt que des underscores, et
+conserver l’extension `.sg` : par exemple `le matou revient.sg`.
+
+Le titre affiché dans le carnet est défini par `\beginsong{Titre du chant}`
+à l’intérieur du fichier. Le nom du fichier ne définit pas ce titre.
+Dans les commandes du terminal, entourer les chemins contenant des espaces
+de guillemets.
+
 ## Quitter l’environnement
 
 Pour quitter l’environnement :
