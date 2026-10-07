@@ -51,9 +51,10 @@ content:
 - song: tempo/Le monde m'appelle.sg
 - song: le_livre_de_la_jungle/Être un homme comme vous.sg
 - song: le_livre_de_la_jungle/Il en faut peu pour être heureux.sg
+- song: chants_liturgiques/qu exulte tout l univers.sg
 template:
   default.tex:
-    title: Carnet de chants — WEG automne 2026
+    title: Carnet de chants - WEG automne 2026
     author: Groupe Joséphine Baker
   patacrep.tex:
     subtitle: parolier
