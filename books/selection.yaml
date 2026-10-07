@@ -1,0 +1,59 @@
+book:
+  lang: fr
+  encoding: utf8
+  datadir: ..
+  pictures: true
+  template: data.tex
+chords:
+  show: true
+  diagrampage: none
+  diagramreminder: none
+  repeatchords: false
+  lilypond: false
+  tablatures: true
+  instrument: guitar
+  notation: solfedge
+authors:
+  separators:
+  - and
+  - et
+  ignore:
+  - unknown
+  after:
+  - by
+  - de
+titles:
+  prefix:
+  - The
+  - Le
+  - La
+  - L'
+  - A
+  - Au
+  - Ces
+  - De
+  - Des
+  - El
+  - Les
+  - Ma
+  - Mon
+  - Un
+content:
+- song: hugues_aufray/santiano.sg
+- song: graeme_allwright/il faut que je m en aille.sg
+- song: François_Lebouteux/Red River Valley.sg
+- song: jamboree/T'en fais pas, la vie est belle.sg
+- song: theophile_renier/Ensemble on est mieux.sg
+- song: marc_durand/le monsieur en chemise.sg
+- song: steve_waring/le matou revient.sg
+- song: jean_claude_gianadda/Love.sg
+- song: scouts/Train d'enfer.sg
+- song: tempo/Le monde m'appelle.sg
+- song: le_livre_de_la_jungle/Être un homme comme vous.sg
+- song: le_livre_de_la_jungle/Il en faut peu pour être heureux.sg
+template:
+  default.tex:
+    title: Carnet de chants — WEG automne 2026
+    author: Groupe Joséphine Baker
+  patacrep.tex:
+    subtitle: parolier

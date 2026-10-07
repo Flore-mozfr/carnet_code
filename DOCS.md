@@ -123,6 +123,57 @@ vérifier les commandes effectivement générées. Si LaTeX échoue, consulter
 `carnet.log` : cela permet de distinguer un problème de génération du template
 d’un problème d’exécution des commandes LaTeX.
 
+## Accords, diagrammes et tablatures
+
+Ces trois éléments ont des réglages distincts dans la section `chords` du
+fichier YAML du carnet :
+
+| Élément | Réglage | Contenu nécessaire |
+| --- | --- | --- |
+| Noms des accords au-dessus des paroles | `show: true` | Des accords comme `\[Am]` dans le chant. |
+| Diagrammes des positions des doigts au début du chant | `diagramreminder: all` | Des définitions de diagrammes comme `\gtab{Am}{X02210}`. |
+| Page récapitulative des diagrammes | `diagrampage: all` | La page d’accords fournie par le style `chords.sty`. |
+| Tablatures musicales | `tablatures: true` | Des passages de tablature écrits dans les sources. |
+
+`tablatures: true` autorise l’affichage des tablatures ; il ne génère ni une
+tablature ni les positions des doigts à partir des noms des accords.
+
+Pour afficher les diagrammes au début de chaque chant et une page
+récapitulative, utiliser :
+
+```yaml
+chords:
+  show: true
+  instrument: guitar
+  notation: solfedge
+  diagramreminder: all
+  diagrampage: all
+```
+
+Les options `diagramreminder` et `diagrampage` acceptent `none` pour désactiver
+l’affichage, `all` pour tout afficher et `important` pour limiter l’affichage
+aux diagrammes marqués importants par le style ou les sources.
+
+Les définitions des diagrammes d’un chant se placent après `\beginsong` et
+ses paramètres, avant les couplets. Par exemple :
+
+```latex
+\gtab{Am}{X02210}
+\gtab{G}{320003}
+\gtab{Dm}{XX0231}
+\gtab{Em}{022000}
+```
+
+Les six caractères décrivent les cordes de la plus grave à la plus aiguë :
+`X` signifie une corde non jouée, `0` une corde à vide et un chiffre la case
+à appuyer. Avec `notation: solfedge`, conserver les noms techniques des
+accords dans les sources : le style les affiche en notation française.
+
+Si les diagrammes n’apparaissent pas, vérifier à la fois le réglage
+`diagramreminder` et la présence des définitions `\gtab` dans le chant.
+Par exemple, `Santiano` possède ces définitions ; un nouveau chant contenant
+uniquement des accords `\[Am]` n’a pas encore de diagrammes à afficher.
+
 ## Étude de cas : retirer des informations de couverture
 
 Le pied de page et le mail illustrent la séparation entre configuration,
