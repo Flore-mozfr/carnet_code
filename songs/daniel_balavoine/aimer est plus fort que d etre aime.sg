@@ -5,10 +5,10 @@
 
   \gtab{Am7}{X02010}
   \gtab{G}{320003}
-  \gtab{F}{1:022100}
-  \gtab*{B&7}{1:X02020}
-  \gtab*{Dm7}{XX0211}
-  \gtab{G7}{210001}
+  \gtab{F}{1:(133211)}
+  \gtab*{B&7}{1:X(13131)}
+  \gtab*{Dm7}{XX02(11)}
+  \gtab{G7}{320001}
   \gtab{C}{X32010}
   \gtab{Am}{X02210}
   \gtab{Dm}{XX0231}

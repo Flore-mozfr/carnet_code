@@ -1,0 +1,53 @@
+book:
+  lang: fr
+  encoding: utf8
+  datadir: ".."
+  pictures: yes
+  template: diagrammes.tex
+chords:
+  show: yes
+  diagrampage: all
+  diagramreminder: none
+  repeatchords: no
+  lilypond: no
+  tablatures: yes
+  instrument: guitar
+  notation: solfedge
+
+authors: # Analyse des auteurs
+  separators:
+  - and
+  - et
+  ignore:
+  - unknown
+  after:
+  - by
+
+titles: # Analyse des titres
+  prefix:
+  - The
+  - Le
+  - La
+  - "L'"
+  - A
+  - Au
+  - Ces
+  - De
+  - Des
+  - El
+  - Les
+  - Ma
+  - Mon
+  - Un
+
+
+content:
+  sort:
+    key: ["by", "title"]
+
+template:
+  default.tex:
+    title: "Carnet de chants"
+    author: "Groupe Joséphine Baker"
+  patacrep.tex:
+    subtitle: "parolier"

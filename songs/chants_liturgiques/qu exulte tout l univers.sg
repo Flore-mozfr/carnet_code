@@ -1,7 +1,14 @@
 \selectlanguage{french}
 \songcolumns{2}
 \beginsong{Qu'exulte tout l'univers}
-  []
+  [by={Communauté\ de\ l'Emmanuel}]
+
+  \gtab{A}{X02220}
+  \gtab{D}{XX0232}
+  \gtab{E}{022100}
+  \gtab{F#m}{2:(133111)}
+  \gtab{C#}{4:X(13331)}
+  \gtab{Fm}{1:(133111)}
 
   \beginverse*
     Intro : \[D] \[E] \[A] \[E] \[A]

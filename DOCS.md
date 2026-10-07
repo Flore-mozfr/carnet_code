@@ -169,6 +169,26 @@ Les six caractères décrivent les cordes de la plus grave à la plus aiguë :
 à appuyer. Avec `notation: solfedge`, conserver les noms techniques des
 accords dans les sources : le style les affiche en notation française.
 
+La correspondance est `A → La`, `B → Si`, `C → Do`, `D → Ré`, `E → Mi`,
+`F → Fa`, `G → Sol`. Écrire les bémols avec `&` (par exemple `B&maj7`
+pour Si bémol majeur 7) et les dièses avec `#`.
+
+Un préfixe comme `2:` indique la première case représentée ; il ne dessine
+pas de barré et ne transforme pas les cordes à vide. Les chiffres non nuls
+sont relatifs à cette première case (`1` représente ici la case 2).
+Les parenthèses délimitent les cordes couvertes par le barré :
+
+```latex
+\gtab{F}{1:(133211)}
+\gtab{Bm}{2:X(13321)}
+\gtab{F#m}{2:(133111)}
+\gtab{Dm7}{XX02(11)}
+```
+
+Ces positions correspondent respectivement à Fa, Si mineur, Fa dièse mineur
+et Ré mineur 7. Le dernier exemple comporte un petit barré sur les deux
+cordes aiguës à la première case.
+
 Si les diagrammes n’apparaissent pas, vérifier à la fois le réglage
 `diagramreminder` et la présence des définitions `\gtab` dans le chant.
 Par exemple, `Santiano` possède ces définitions ; un nouveau chant contenant
