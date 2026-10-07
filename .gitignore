@@ -15,6 +15,7 @@ dist
 *.fdb_latexmk
 *.fls
 *.tar.gz
+*.gz
 .eggs
 .tox
 .venv/
