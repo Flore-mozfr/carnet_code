@@ -45,6 +45,14 @@
 
 
 \makeatletter
+% songs.sty ne détecte le mode PDF qu'avec \pdfoutput (pdfTeX).
+% Sous LuaLaTeX, activer aussi les signets : leurs destinations portent
+% le suffixe de niveau (.1 ou .2) utilisé par les liens des index.
+\ifdefined\directlua
+   \ifnum\outputmode>0\relax
+      \SB@pdftrue
+   \fi
+\fi
 \@ifpackageloaded{hyperref}{}{
    \usepackage{url}
    \newcommand{\phantomsection}{}
