@@ -4,16 +4,16 @@
   [by={Michel Fugain}]
 
   \gtab{G}{320003}
-  \gtab{Bm7}{2:X02010}
-  \gtab{F7}{1:020100}
+  \gtab{Bm7}{2:X(13121)}
+  \gtab{F7}{1:(131211)}
   \gtab{E7}{020100}
   \gtab{Am7}{X02010}
-  \gtab{Cm7}{3:X02010}
+  \gtab{Cm7}{3:X(13121)}
   \gtab{D7}{XX0212}
-  \gtab*{Gm7}{3X333X}
-  \gtab*{Gm7/F}{1X333X}
-  \gtab*{Bbmaj7}{1:X0212X}
-  \gtab*{Ebmaj7}{1:XX1333}
+  \gtab*{Gm7}{3X(333)X}
+  \gtab*{Gm7/F}{1X(333)X}
+  \gtab*{B&maj7}{X1323X}
+  \gtab*{E&maj7}{XX1(333)}
   \gtab*{Am7b5}{X0101X}
 
   \beginchorus
@@ -26,12 +26,12 @@
 
   \beginverse
     Mais je suis \[Gm7/F]seul dans l'uni\[Cm7]vers
-    J'ai peur du \[F7]ciel et de l'hi\[Bbmaj7]ver
-    J'ai peur des \[Ebmaj7]fous et de la \[Am7b5]guerre
+    J'ai peur du \[F7]ciel et de l'hi\[B&maj7]ver
+    J'ai peur des \[E&maj7]fous et de la \[Am7b5]guerre
     J'ai peur du \[D7]temps qui passe, \[Gm7]dis
     Comment peut-\[Gm7/F]on vivre aujourd'\[Cm7]hui
-    Dans la fu\[F7]reur et dans le \[Bbmaj7]bruit
-    Je ne sais \[Ebmaj7]pas, je ne sais \[Am7b5]plus, je suis \[D7]perdu
+    Dans la fu\[F7]reur et dans le \[B&maj7]bruit
+    Je ne sais \[E&maj7]pas, je ne sais \[Am7b5]plus, je suis \[D7]perdu
   \endverse
 
   \beginverse
