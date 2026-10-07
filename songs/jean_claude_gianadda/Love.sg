@@ -1,0 +1,35 @@
+\selectlanguage{french}
+\songcolumns{2}
+\beginsong{Love}
+  [by={Jean-Claude Gianadda}]
+
+  \musicnote{Reprendre le refrain entre les couplets.}
+
+  \beginchorus
+    \[Am]Love, c'était son \[Dm]Nom,
+    \[G7]Love, un vaga\[C]bond
+    Qui vivait de so\[E7]leil,
+    D'espace et de chan\[Am]sons.
+  \endchorus
+
+  \beginverse
+    \[Am]Il est venu chez nous, guitare en bandou\[Dm]lière,
+    Venait d'on ne sait \[G]où, il parcourait la \[C]terre ;
+    Et dans ses longs che\[E7]veux, le vent semblait chan\[Am]ter,
+    Tout au fond de ses \[E7]yeux dansait la liber\[Am]té.
+  \endverse
+
+  \beginverse
+    \[Am]Il écoutait le vent, les fleurs et les ri\[Dm]vières,
+    Jouait comme un en\[G]fant, parlait à la lu\[C]mière ;
+    Il partageait ses \[E7]rires, ses rêves et ses pro\[Am]jets
+    Et dans chaque sou\[E7]rire dansait la liber\[Am]té.
+  \endverse
+
+  \beginverse
+    \[Am]Il est parti un jour, nul ne sait où il \[Dm]est ;
+    Au pays de l'A\[G]mour, tu peux le rencon\[C]trer ;
+    Mais dans notre mai\[E7]son, il nous aura lais\[Am]sé,
+    Avec cette chan\[E7]son, un peu de liber\[Am]té.
+  \endverse
+\endsong

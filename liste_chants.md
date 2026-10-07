@@ -23,15 +23,15 @@ Les cases cochées indiquent les chants présents dans le dossier `songs/` de ce
 - [ ] Les gens heureux — Gérard Lenorman (si « La ballade des gens heureux »)
 - [x] Qui peut faire de la voile sans vent — Traditionnel
 - [x] Red river valley — François Lebouteux (adaptation scoute)
-- [ ] T'en fais pas, la vie est belle — Jamboree — cool pour apprendre à chanter en canon
+- [x] T'en fais pas, la vie est belle — Jamboree — cool pour apprendre à chanter en canon
 - [x] Ensemble, on est mieux — Théophile Rénier
 - [x] Le monsieur en chemise — Marc Durand
 - [x] Des couleurs sur mon chemin — Amplitude
 - [ ] Chevaliers de la table ronde — Traditionnel
-- [ ] Le matou revient — Steve Waring
+- [x] Le matou revient — Steve Waring
 - [ ] Le petit âne gris — Hugues Aufray
-- [ ] Love — Jean-Claude Gianadda
-- [ ] Train d’enfer — Musique scouts
+- [x] Love — Jean-Claude Gianadda
+- [x] Train d’enfer — Musique scouts
 - [x] Le monde m’appelle — Tempo
 - [x] À nos souvenirs — Trois Cafés Gourmands
 - [x] Changer le monde — Jamboree
@@ -46,8 +46,8 @@ Les cases cochées indiquent les chants présents dans le dossier `songs/` de ce
 - [ ] Les crapauds — Alain Souchon (reprise ; paroles : Marc Legrand, musique : Victor Meusy)
 - [x] Ce n'est qu'un au revoir — Jacques Sevin (adaptation scoute) — présent sous le titre « Chant des adieux ».
 - [x] La promesse — Grégoire
-- [ ] Être un Homme comme vous — José Bartel et Jean Stout
-- [ ] Il en faut peu pour être heureux — Jean Stout et Pascal Bressy
+- [x] Être un Homme comme vous — José Bartel et Jean Stout
+- [x] Il en faut peu pour être heureux — Jean Stout et Pascal Bressy
 - [x] Toi + moi — Grégoire
 - [ ] Tout le bonheur du monde — Sinsemilia
 - [ ] Femme libérée — Cookie Dingler
