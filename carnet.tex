@@ -1,0 +1,648 @@
+% Copyright (C) 2014 The Patacrep Team
+% Copyright (C) 2009-2010 Romain Goffe, Alexandre Dupas
+% Copyright (C) 2008 Kevin W. Hamlen
+%
+% This program is free software; you can redistribute it and/or
+% modify it under the terms of the GNU General Public License
+% as published by the Free Software Foundation; either version 2
+% of the License, or (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program; if not, write to the Free Software
+% Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+% MA  02110-1301, USA.
+
+
+% begin document
+
+
+
+
+
+
+%% Automatically generated document.
+%% You may edit this file but all changes will be overwritten.
+%% If you want to change this document, have a look at
+%% the templating system.
+%%
+%% Generated using Songbook <http://www.patacrep.fr>
+
+\makeatletter
+\def\input@path{ %
+        {/home/flore/Github/carnet_code/books/../templates/styles/} %
+        {/home/flore/Github/carnet_code/books/templates/styles/} %
+        {/home/flore/carnet_chants/lib/python3.13/site-packages/patacrep/data/templates/styles/} %
+}
+\makeatother
+
+\documentclass[
+    ]{article}
+
+\usepackage[
+chorded,
+pictures,
+guitar,
+    ]{crepbook}
+
+\usepackage[
+     a4paper % paper size
+     ,includeheadfoot % include header and footer into text size
+     ,hmarginratio=1:1 % ratio between inner and outer margin (default)
+     ,outer=1.8cm % outer margin (right)
+     ,vmarginratio=1:1 % ratio between top and bottom margin
+     ,bmargin=1.3cm % bottom margin
+     ]{geometry}
+
+\usepackage{lmodern}
+
+
+\PassOptionsToPackage{french}{babel}
+\usepackage[french]{babel}
+\lang{french}
+
+\usepackage{graphicx}
+\graphicspath{ %
+        {/home/flore/Github/carnet_code/books/../} %
+        {/home/flore/Github/carnet_code/books/} %
+        {/home/flore/carnet_chants/lib/python3.13/site-packages/patacrep/data/} %
+}
+
+
+\makeatletter
+% songs.sty ne détecte le mode PDF qu'avec \pdfoutput (pdfTeX).
+% Sous LuaLaTeX, activer aussi les signets : leurs destinations portent
+% le suffixe de niveau (.1 ou .2) utilisé par les liens des index.
+\ifdefined\directlua
+   \ifnum\outputmode>0\relax
+      \SB@pdftrue
+   \fi
+\fi
+\@ifpackageloaded{hyperref}{}{
+   \usepackage{url}
+   \newcommand{\phantomsection}{}
+   \newcommand{\hyperlink}[2]{#2}
+   \newcommand{\href}[2]{\expandafter\url\expandafter{#1}}
+}
+\makeatother
+
+
+\usepackage{chords}
+
+\title{Carnet de chants}
+\author{Groupe Joséphine Baker}
+
+\newindex{titleidx}{carnet_title}
+\newauthorindex{authidx}{carnet_auth}
+
+\authignoreword{unknown}
+\authbyword{by}
+\authbyword{de}
+\authsepword{and}
+\authsepword{et}
+
+\notenamesout{La}{Si}{Do}{R\'e}{Mi}{Fa}{Sol}
+
+
+\pagestyle{empty}\definecolor{SongNumberBgColor}{HTML}{D1E4AE}
+\definecolor{NoteBgColor}{HTML}{D1E4AE}
+\definecolor{IndexBgColor}{HTML}{D1E4AE}
+
+\renewcommand{\snumbgcolor}{SongNumberBgColor}
+\renewcommand{\notebgcolor}{NoteBgColor}
+\renewcommand{\idxbgcolor}{IndexBgColor}
+
+\definecolor{tango-green-3}{HTML}{4e9a06}
+\definecolor{tango-blue-3}{HTML}{204a87}
+\usepackage[
+    bookmarks,
+    bookmarksopen,
+    hyperfigures=true,
+    colorlinks=true,
+    linkcolor=tango-green-3,
+    urlcolor=tango-blue-3,
+    unicode=true
+    ]{hyperref}
+
+
+\subtitle{parolier}
+% \mail{unemaildugroupe@sgdf.fr}
+% Reprendre les informations de couverture avec la ligne du mail commentée.
+\makeatletter
+\def\@metainfos{%
+    \ialign{%
+        \bf{##} \hfil & ## \hfil \cr
+        \@insertelement{version}
+        \@insertelement{date}
+        \@insertelement{author}
+        \@insertelement{web}
+%        \@insertelement{mail}
+    }
+}
+\makeatother
+\web{https://www.sgdf.fr}
+\picture{img/JB_gerland}
+% \footer{Créé avec le programme Songbook}
+\footer{Créé avec le programme Songbook}
+
+\usepackage{licence}
+
+
+% Polices SGDF embarquées : aucune installation système nécessaire.
+\setmainfont{Sarabun}[
+   Path=fonts/sarabun/,
+   Extension=.ttf,
+   UprightFont=*-Regular,
+   BoldFont=*-Bold,
+   ItalicFont=*-Italic,
+   BoldItalicFont=*-BoldItalic
+]
+\setsansfont{Sarabun}[
+   Path=fonts/sarabun/,
+   Extension=.ttf,
+   UprightFont=*-Regular,
+   BoldFont=*-Bold,
+   ItalicFont=*-Italic,
+   BoldItalicFont=*-BoldItalic
+]
+\newfontfamily\sgdftitlefont{Raleway-Bold.otf}[Path=fonts/raleway/]
+\renewcommand{\stitlefont}{\sgdftitlefont\LARGE}
+\renewcommand{\idxtitlefont}{\sgdftitlefont}
+\makeatletter
+\def\@titlefont{\sgdftitlefont\Huge}
+\def\@subtitlefont{\sgdftitlefont\large}
+\renewcommand{\chorusfont}{%
+   \it %
+}
+
+\def\@chordfont{%
+   \it %
+}
+\definecolor{ChordColor}{HTML}{000000}
+\renewcommand{\printchord}[1]{\@chordfont\textcolor{ChordColor}{#1}}
+
+\renewcommand{\lyricfont}{%
+}
+\makeatother
+
+
+\geometry{
+ a4paper, landscape
+}
+
+
+\let\OldSongColumns=\songcolumns
+\def\songcolumns#1{%
+    \OldSongColumns{#1}
+}
+
+
+\begin{document}
+
+\maketitle
+
+% Licence
+%\newpage
+%\input{license}
+%\newpage
+%
+\showindex{\songindexname}{titleidx}
+\showindex{\authorindexname}{authidx}
+
+% list of chords
+\ifdiagrampage
+   \phantomsection
+   \addcontentsline{toc}{section}{\chordlistname}
+   \chords
+\fi
+\setcounter{songnum}{1}%
+
+\phantomsection
+\addcontentsline{toc}{section}{\songlistname}
+
+\begin{songs}{titleidx,authidx}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./chants_liturgiques/qu exulte tout l univers.sg
+
+\import{/home/flore/Github/carnet_code/songs/chants_liturgiques/}{qu exulte tout l univers.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./graeme_allwright/il faut que je m en aille.sg
+
+\import{/home/flore/Github/carnet_code/songs/graeme_allwright/}{il faut que je m en aille.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./graeme_allwright/petit garcon.sg
+
+\import{/home/flore/Github/carnet_code/songs/graeme_allwright/}{petit garcon.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./amplitude/avec ma tribu.sg
+
+\import{/home/flore/Github/carnet_code/songs/amplitude/}{avec ma tribu.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./amplitude/la caravane.sg
+
+\import{/home/flore/Github/carnet_code/songs/amplitude/}{la caravane.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./amplitude/chant des equipages.sg
+
+\import{/home/flore/Github/carnet_code/songs/amplitude/}{chant des equipages.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./amplitude/cite cap.sg
+
+\import{/home/flore/Github/carnet_code/songs/amplitude/}{cite cap.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./amplitude/des couleurs sur mon chemin.sg
+
+\import{/home/flore/Github/carnet_code/songs/amplitude/}{des couleurs sur mon chemin.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./amplitude/vis tes reves.sg
+
+\import{/home/flore/Github/carnet_code/songs/amplitude/}{vis tes reves.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./hugues_aufray/debout les gars.sg
+
+\import{/home/flore/Github/carnet_code/songs/hugues_aufray/}{debout les gars.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./hugues_aufray/elle descend de la montagne.sg
+
+\import{/home/flore/Github/carnet_code/songs/hugues_aufray/}{elle descend de la montagne.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./hugues_aufray/santiano.sg
+
+\import{/home/flore/Github/carnet_code/songs/hugues_aufray/}{santiano.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./charles_aznavour/emmenez-moi.sg
+
+\import{/home/flore/Github/carnet_code/songs/charles_aznavour/}{emmenez-moi.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./charles_aznavour/Je m voyais deja.sg
+
+\import{/home/flore/Github/carnet_code/songs/charles_aznavour/}{Je m voyais deja.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./daniel_balavoine/aimer est plus fort que d etre aime.sg
+
+\import{/home/flore/Github/carnet_code/songs/daniel_balavoine/}{aimer est plus fort que d etre aime.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./daniel_balavoine/l aziza.sg
+
+\import{/home/flore/Github/carnet_code/songs/daniel_balavoine/}{l aziza.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./daniel_balavoine/tous les cris les sos.sg
+
+\import{/home/flore/Github/carnet_code/songs/daniel_balavoine/}{tous les cris les sos.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./daniel_balavoine/vivre ou survivre.sg
+
+\import{/home/flore/Github/carnet_code/songs/daniel_balavoine/}{vivre ou survivre.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./amplitude/La vie en bleu.sg
+
+\import{/home/flore/Github/carnet_code/songs/amplitude/}{La vie en bleu.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./georges_brassens/les copains d abord.sg
+
+\import{/home/flore/Github/carnet_code/songs/georges_brassens/}{les copains d abord.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./le_livre_de_la_jungle/Il en faut peu pour être heureux.sg
+
+\import{/home/flore/Github/carnet_code/songs/le_livre_de_la_jungle/}{Il en faut peu pour être heureux.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./francis_cabrel/la corrida.sg
+
+\import{/home/flore/Github/carnet_code/songs/francis_cabrel/}{la corrida.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./francis_cabrel/encore et encore.sg
+
+\import{/home/flore/Github/carnet_code/songs/francis_cabrel/}{encore et encore.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./francis_cabrel/l encre de tes yeux.sg
+
+\import{/home/flore/Github/carnet_code/songs/francis_cabrel/}{l encre de tes yeux.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./francis_cabrel/je l aime a mourir.sg
+
+\import{/home/flore/Github/carnet_code/songs/francis_cabrel/}{je l aime a mourir.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./francis_cabrel/je t aimais je t aime et je t aimerai.sg
+
+\import{/home/flore/Github/carnet_code/songs/francis_cabrel/}{je t aimais je t aime et je t aimerai.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./francis_cabrel/octobre.sg
+
+\import{/home/flore/Github/carnet_code/songs/francis_cabrel/}{octobre.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./francis_cabrel/petite marie.sg
+
+\import{/home/flore/Github/carnet_code/songs/francis_cabrel/}{petite marie.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./francis_cabrel/sarbacane.sg
+
+\import{/home/flore/Github/carnet_code/songs/francis_cabrel/}{sarbacane.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./glorious/Que ma bouche chante ta louange.sg
+
+\import{/home/flore/Github/carnet_code/songs/glorious/}{Que ma bouche chante ta louange.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./joe_dassin/les champs elysees.sg
+
+\import{/home/flore/Github/carnet_code/songs/joe_dassin/}{les champs elysees.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./joe_dassin/Dans les yeux d'Émilie.sg
+
+\import{/home/flore/Github/carnet_code/songs/joe_dassin/}{Dans les yeux d'Émilie.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./joe_dassin/siffler sur la colline.sg
+
+\import{/home/flore/Github/carnet_code/songs/joe_dassin/}{siffler sur la colline.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./jérémie_dazy/Je prends le relais.sg
+
+\import{/home/flore/Github/carnet_code/songs/jérémie_dazy/}{Je prends le relais.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./marc_durand/le monsieur en chemise.sg
+
+\import{/home/flore/Github/carnet_code/songs/marc_durand/}{le monsieur en chemise.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./michel_fugain/fais comme l oiseau.sg
+
+\import{/home/flore/Github/carnet_code/songs/michel_fugain/}{fais comme l oiseau.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./michel_fugain/une belle histoire.sg
+
+\import{/home/flore/Github/carnet_code/songs/michel_fugain/}{une belle histoire.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./france_gall/il jouait du piano debout.sg
+
+\import{/home/flore/Github/carnet_code/songs/france_gall/}{il jouait du piano debout.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./jean_claude_gianadda/Love.sg
+
+\import{/home/flore/Github/carnet_code/songs/jean_claude_gianadda/}{Love.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./glorious/Dans la joie.sg
+
+\import{/home/flore/Github/carnet_code/songs/glorious/}{Dans la joie.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./jean-jacques_goldman/ensemble.sg
+
+\import{/home/flore/Github/carnet_code/songs/jean-jacques_goldman/}{ensemble.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./jean-jacques_goldman/et l on y peut rien.sg
+
+\import{/home/flore/Github/carnet_code/songs/jean-jacques_goldman/}{et l on y peut rien.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./jean-jacques_goldman/je te donne.sg
+
+\import{/home/flore/Github/carnet_code/songs/jean-jacques_goldman/}{je te donne.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./jean-jacques_goldman/on ira.sg
+
+\import{/home/flore/Github/carnet_code/songs/jean-jacques_goldman/}{on ira.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./gregoire/La promesse.sg
+
+\import{/home/flore/Github/carnet_code/songs/gregoire/}{La promesse.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./gregoire/toi moi.sg
+
+\import{/home/flore/Github/carnet_code/songs/gregoire/}{toi moi.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./traditionnel/Des milliards de chemins.sg
+
+\import{/home/flore/Github/carnet_code/songs/traditionnel/}{Des milliards de chemins.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./indochine/l aventurier.sg
+
+\import{/home/flore/Github/carnet_code/songs/indochine/}{l aventurier.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./indochine/j ai demande a la lune.sg
+
+\import{/home/flore/Github/carnet_code/songs/indochine/}{j ai demande a la lune.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./jamboree/Changer le monde.sg
+
+\import{/home/flore/Github/carnet_code/songs/jamboree/}{Changer le monde.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./jamboree/Plus que des frères.sg
+
+\import{/home/flore/Github/carnet_code/songs/jamboree/}{Plus que des frères.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./Le cinquième/La scoutance.sg
+
+\import{/home/flore/Github/carnet_code/songs/Le cinquième/}{La scoutance.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./François_Lebouteux/Red River Valley.sg
+
+\import{/home/flore/Github/carnet_code/songs/François_Lebouteux/}{Red River Valley.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./louise_attaque/depuis toujours.sg
+
+\import{/home/flore/Github/carnet_code/songs/louise_attaque/}{depuis toujours.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./louise_attaque/je t emmene au vent.sg
+
+\import{/home/flore/Github/carnet_code/songs/louise_attaque/}{je t emmene au vent.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./louise_attaque/lea.sg
+
+\import{/home/flore/Github/carnet_code/songs/louise_attaque/}{lea.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./louise_attaque/les nuits parisiennes.sg
+
+\import{/home/flore/Github/carnet_code/songs/louise_attaque/}{les nuits parisiennes.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./louise_attaque/ton invitation.sg
+
+\import{/home/flore/Github/carnet_code/songs/louise_attaque/}{ton invitation.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./manau/la tribu de dana.sg
+
+\import{/home/flore/Github/carnet_code/songs/manau/}{la tribu de dana.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./traditionnel/Viens un peu voir à côté.sg
+
+\import{/home/flore/Github/carnet_code/songs/traditionnel/}{Viens un peu voir à côté.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./renaud/la ballade nord irlandaise.sg
+
+\import{/home/flore/Github/carnet_code/songs/renaud/}{la ballade nord irlandaise.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./renaud/c est quand qu on va ou.sg
+
+\import{/home/flore/Github/carnet_code/songs/renaud/}{c est quand qu on va ou.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./renaud/des que le vent soufflera.sg
+
+\import{/home/flore/Github/carnet_code/songs/renaud/}{des que le vent soufflera.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./renaud/manatthan-kaboul.sg
+
+\import{/home/flore/Github/carnet_code/songs/renaud/}{manatthan-kaboul.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./renaud/manu.sg
+
+\import{/home/flore/Github/carnet_code/songs/renaud/}{manu.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./renaud/mistral gagnant.sg
+
+\import{/home/flore/Github/carnet_code/songs/renaud/}{mistral gagnant.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./renaud/morgane de toi.sg
+
+\import{/home/flore/Github/carnet_code/songs/renaud/}{morgane de toi.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./theophile_renier/Ensemble on est mieux.sg
+
+\import{/home/flore/Github/carnet_code/songs/theophile_renier/}{Ensemble on est mieux.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./scouts/Train d'enfer.sg
+
+\import{/home/flore/Github/carnet_code/songs/scouts/}{Train d'enfer.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./gilles_servat/la blanche hermine.sg
+
+\import{/home/flore/Github/carnet_code/songs/gilles_servat/}{la blanche hermine.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./jacques_sevin/chant de la promesse.sg
+
+\import{/home/flore/Github/carnet_code/songs/jacques_sevin/}{chant de la promesse.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./jacques_sevin/chant des adieux.sg
+
+\import{/home/flore/Github/carnet_code/songs/jacques_sevin/}{chant des adieux.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./jacques_sevin/legende du feu.sg
+
+\import{/home/flore/Github/carnet_code/songs/jacques_sevin/}{legende du feu.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./jacques_sevin/prière scoute.sg
+
+\import{/home/flore/Github/carnet_code/songs/jacques_sevin/}{prière scoute.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./le_livre_de_la_jungle/Être un homme comme vous.sg
+
+\import{/home/flore/Github/carnet_code/songs/le_livre_de_la_jungle/}{Être un homme comme vous.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./tempo/Le monde m'appelle.sg
+
+\import{/home/flore/Github/carnet_code/songs/tempo/}{Le monde m'appelle.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./traditionnel/Qui peut faire de la voile sans vent.sg
+
+\import{/home/flore/Github/carnet_code/songs/traditionnel/}{Qui peut faire de la voile sans vent.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./traditionnel/La strasbourgeoise.sg
+
+\import{/home/flore/Github/carnet_code/songs/traditionnel/}{La strasbourgeoise.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./jamboree/T'en fais pas, la vie est belle.sg
+
+\import{/home/flore/Github/carnet_code/songs/jamboree/}{T'en fais pas, la vie est belle.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./Trois_cafes_gourmands/A nos souvenirs.sg
+
+\import{/home/flore/Github/carnet_code/songs/Trois_cafes_gourmands/}{A nos souvenirs.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./tryo/l hymne de nos campagnes.sg
+
+\import{/home/flore/Github/carnet_code/songs/tryo/}{l hymne de nos campagnes.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./hubert_bourel_et_marie_louise_valentin/Ne rentrez pas chez vous comme avant.sg
+
+\import{/home/flore/Github/carnet_code/songs/hubert_bourel_et_marie_louise_valentin/}{Ne rentrez pas chez vous comme avant.sg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% songs/./steve_waring/le matou revient.sg
+
+\import{/home/flore/Github/carnet_code/songs/steve_waring/}{le matou revient.sg}
+
+\end{songs}
+
+
+
+
+\end{document}
