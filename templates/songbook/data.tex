@@ -70,7 +70,29 @@ description:
 \usepackage{licence}
 
 %! Font management
+% Polices SGDF embarquées : aucune installation système nécessaire.
+\setmainfont{Sarabun}[
+   Path=fonts/sarabun/,
+   Extension=.ttf,
+   UprightFont=*-Regular,
+   BoldFont=*-Bold,
+   ItalicFont=*-Italic,
+   BoldItalicFont=*-BoldItalic
+]
+\setsansfont{Sarabun}[
+   Path=fonts/sarabun/,
+   Extension=.ttf,
+   UprightFont=*-Regular,
+   BoldFont=*-Bold,
+   ItalicFont=*-Italic,
+   BoldItalicFont=*-BoldItalic
+]
+\newfontfamily\sgdftitlefont{Raleway-Bold.otf}[Path=fonts/raleway/]
+\renewcommand{\stitlefont}{\sgdftitlefont\LARGE}
+\renewcommand{\idxtitlefont}{\sgdftitlefont}
 \makeatletter
+\def\@titlefont{\sgdftitlefont\Huge}
+\def\@subtitlefont{\sgdftitlefont\large}
 \renewcommand{\chorusfont}{%
    (* for letter in template_var.chorusfont *)
    (* if letter=="i" *)   \it %

@@ -1,6 +1,10 @@
 # Carnet de chants
 Bienvenue dans le dépôt du carnet de chant du groupe SGDF Joséphine Baker !
 
+Les carnets utilisent Raleway pour les titres et Sarabun pour les paroles,
+les accords et le texte courant. Les polices et leurs licences sont incluses
+dans `fonts/` ; leur configuration se trouve dans `templates/songbook/data.tex`.
+
 Pour lancer la génération du carnet de chants, activer l’environnement puis exécuter :
 
 Rendez compil.sh exécutable :
