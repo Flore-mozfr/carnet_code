@@ -3,10 +3,10 @@ book:
   encoding: utf8
   datadir: ".."
   pictures: yes
-  template: data.tex
+  template: diagrammes.tex
 chords:
   show: yes
-  diagrampage: none
+  diagrampage: all
   diagramreminder: none
   repeatchords: no
   lilypond: no
@@ -22,7 +22,6 @@ authors: # Analyse des auteurs
   - unknown
   after:
   - by
-  - de
 
 titles: # Analyse des titres
   prefix:
