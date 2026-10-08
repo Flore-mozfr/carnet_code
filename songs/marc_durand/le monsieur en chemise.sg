@@ -5,10 +5,10 @@
   [by={Marc Durand}]
 \indextitleentry[titleidx]{Monsieur en chemise, Le}
 
-  \gtab{F}{1:022100}
-  \gtab{C}{X32010}
-  \gtab{G}{320003}
-  \gtab{Am}{X02210}
+  \chorddiagram{F}
+  \chorddiagram{C}
+  \chorddiagram{G}
+  \chorddiagram{Am}
 
   \beginverse
     J'suis o\[Am]range, j’ai 8 ans

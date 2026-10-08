@@ -1,0 +1,38 @@
+% Shared guitar fingerings. Song files only select which diagrams to display.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{guitar-diagrams}[2026/10/08 Shared guitar diagrams]
+\newcommand{\DeclareGuitarDiagram}[2]{%
+  \expandafter\edef\csname guitar@diagram@#1\endcsname{\noexpand\gtab{\detokenize{#1}}{\unexpanded{#2}}}%
+}
+\newcommand{\chorddiagram}[1]{%
+  \ifcsname guitar@diagram@#1\endcsname
+    \csname guitar@diagram@#1\endcsname
+  \else
+    \PackageError{guitar-diagrams}{Unknown chord diagram: #1}{Declare its fingering in guitar-diagrams.sty.}%
+  \fi
+}
+
+\DeclareGuitarDiagram{A}{X02220}
+\DeclareGuitarDiagram{A7}{X02020}
+\DeclareGuitarDiagram{Am}{X02210}
+\DeclareGuitarDiagram{B&}{1:X02220}
+\DeclareGuitarDiagram{B&7}{1:X02020}
+\DeclareGuitarDiagram{B7}{X21202}
+\DeclareGuitarDiagram{Bm}{2:X02210}
+\DeclareGuitarDiagram{C}{X32010}
+\DeclareGuitarDiagram{C#}{4:X02220}
+\DeclareGuitarDiagram{C7}{X32310}
+\DeclareGuitarDiagram{Cm}{3:X02210}
+\DeclareGuitarDiagram{D}{XX0232}
+\DeclareGuitarDiagram{D7}{XX0212}
+\DeclareGuitarDiagram{Dm}{XX0231}
+\DeclareGuitarDiagram{E}{022100}
+\DeclareGuitarDiagram{E&}{3:X02220}
+\DeclareGuitarDiagram{E7}{020100}
+\DeclareGuitarDiagram{Em}{022000}
+\DeclareGuitarDiagram{F}{1:022100}
+\DeclareGuitarDiagram{F#m}{2:022000}
+\DeclareGuitarDiagram{F7}{1:020100}
+\DeclareGuitarDiagram{Fm}{1:022000}
+\DeclareGuitarDiagram{G}{320003}
+\DeclareGuitarDiagram{G7}{320001}

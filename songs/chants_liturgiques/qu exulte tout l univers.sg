@@ -3,6 +3,13 @@
 \beginsong{Qu'exulte tout l'univers}
   []
 
+  \chorddiagram{D}
+  \chorddiagram{E}
+  \chorddiagram{A}
+  \chorddiagram{F#m}
+  \chorddiagram{C#}
+  \chorddiagram{Fm}
+
   \beginverse*
     Intro : \[D] \[E] \[A] \[E] \[A]
   \endverse

@@ -3,10 +3,10 @@
 \beginsong{Santiano}
   [by={Hugues Aufray}]
 
-  \gtab{Am}{X02210}
-  \gtab{G}{320003}
-  \gtab{Dm}{XX0231}
-  \gtab{Em}{022000}
+  \chorddiagram{Am}
+  \chorddiagram{G}
+  \chorddiagram{Dm}
+  \chorddiagram{Em}
 
 
   \beginverse
