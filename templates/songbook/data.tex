@@ -143,6 +143,50 @@ description:
 %! End of columns management
 (* endblock *)
 
+(* block title *)
+% Couverture commune aux carnets : pictos vectoriels et logo monochrome.
+\makeatletter
+\begin{titlepage}
+  \thispagestyle{empty}
+  \centering
+  \color{black}
+  \hypersetup{urlcolor=black,linkcolor=black}
+  \vspace*{2mm}
+  {\begin{minipage}{.88\textwidth}
+    \centering\sgdftitlefont\fontsize{30}{35}\selectfont
+    \@title\par
+  \end{minipage}\par}
+  \vspace{3mm}
+  {\@subtitlefont\@subtitle\par}
+  \vfill
+  \begin{tikzpicture}[x=.0085\textwidth,y=.012\textheight]
+    \path[use as bounding box] (0,0) rectangle (100,40);
+    \node at (50,11) {\includegraphics[height=.23\textheight]{img/cover/FeuDeCamp.pdf}};
+    \node at (29,8) {\includegraphics[height=.115\textheight]{img/cover/Tente.pdf}};
+    \node at (13,12) {\includegraphics[height=.21\textheight]{img/cover/Arbre.pdf}};
+    \node at (76,12) {\includegraphics[height=.19\textheight]{img/cover/Arbre.pdf}};
+    \node at (87,9) {\includegraphics[height=.13\textheight]{img/cover/Arbre.pdf}};
+    \node at (72,32) {\includegraphics[height=.065\textheight]{img/cover/Lune.pdf}};
+    \node at (25,29) {\includegraphics[height=.027\textheight]{img/cover/Etoile.pdf}};
+    \node at (39,35) {\includegraphics[height=.035\textheight]{img/cover/Etoile.pdf}};
+    \node at (55,29) {\includegraphics[height=.025\textheight]{img/cover/Etoile.pdf}};
+    \node at (86,29) {\includegraphics[height=.023\textheight]{img/cover/Etoile.pdf}};
+  \end{tikzpicture}\par
+  \vfill
+  \includegraphics[width=.36\textwidth,height=.10\textheight,keepaspectratio]{img/cover/JB_Gerland-nb.png}\par
+  \vspace{4mm}
+  {\footnotesize
+    \begingroup
+      \def\and{, }
+      \leavevmode\vbox{\@metainfos}\par
+    \endgroup
+    \vspace{2mm}
+    \@footer\par
+  }
+\end{titlepage}
+\makeatother
+(* endblock *)
+
 %(* block preface *)
 % Licence
 %\newpage

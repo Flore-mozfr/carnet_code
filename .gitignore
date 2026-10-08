@@ -11,6 +11,7 @@ dist
 *.log
 *.out
 *.pdf
+!img/cover/*.pdf
 *.pyc
 *.fdb_latexmk
 *.fls

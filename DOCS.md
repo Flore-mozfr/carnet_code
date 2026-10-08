@@ -86,6 +86,12 @@ utilisateurs et pourrait disparaître lors d’une réinstallation.
 
 ## Où intervenir pour modifier le carnet ?
 
+La couverture « veillée » est définie dans le bloc `title` de `data.tex`.
+Elle remplace la page de titre de `crepbook`, réutilise les informations du
+YAML et compose les pictos SGDF avec le logo monochrome. Les assets prêts à
+compiler et leurs sources sont dans `img/cover/` ; son `README.md` décrit
+leur origine et la conversion. Les deux carnets partagent cette couverture.
+
 Choisir le fichier selon ce que l’on veut changer :
 
 | Modification | Point de départ |
