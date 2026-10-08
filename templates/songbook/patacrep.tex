@@ -50,12 +50,12 @@ default:
     picture: img/JB_gerland
     footer: "Generated using Songbook (\\url{http://www.patacrep.fr})"
     color:
-      songlink: 4e9a06
-      hyperlink: 204a87
+      songlink: 003A5D
+      hyperlink: 003A5D
     bgcolor:
-      songnumber: D1E4AE
-      note: D1E4AE
-      index: D1E4AE
+      songnumber: 003A5D
+      note: 003A5D
+      index: 003A5D
   fr: {footer: "Créé avec le programme Songbook"}
 description:
   en:
@@ -121,15 +121,23 @@ description:
 \renewcommand{\notebgcolor}{NoteBgColor}
 \renewcommand{\idxbgcolor}{IndexBgColor}
 
-\definecolor{tango-green-3}{HTML}{(( template_var.color.songlink ))}
-\definecolor{tango-blue-3}{HTML}{(( template_var.color.hyperlink ))}
+% Texte blanc sur les aplats bleu SGDF, sans changer les autres textes.
+\let\sgdfprintsongnum\printsongnum
+\renewcommand{\printsongnum}[1]{\textcolor{white}{\sgdfprintsongnum{#1}}}
+\let\sgdfnotefont\notefont
+\renewcommand{\notefont}{\sgdfnotefont\color{white}}
+\let\sgdfidxheadfont\idxheadfont
+\renewcommand{\idxheadfont}{\sgdfidxheadfont\color{white}}
+
+\definecolor{SongLinkColor}{HTML}{(( template_var.color.songlink ))}
+\definecolor{HyperlinkColor}{HTML}{(( template_var.color.hyperlink ))}
 \usepackage[
     bookmarks,
     bookmarksopen,
     hyperfigures=true,
     colorlinks=true,
-    linkcolor=tango-green-3,
-    urlcolor=tango-blue-3,
+    linkcolor=SongLinkColor,
+    urlcolor=HyperlinkColor,
     unicode=true
     ]{hyperref}
 

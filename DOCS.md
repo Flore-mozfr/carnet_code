@@ -92,6 +92,12 @@ YAML et compose les pictos SGDF avec le logo monochrome. Les assets prêts à
 compiler et leurs sources sont dans `img/cover/` ; son `README.md` décrit
 leur origine et la conversion. Les deux carnets partagent cette couverture.
 
+La palette intérieure par défaut est définie dans `patacrep.tex` : bleu SGDF
+`003A5D` pour les liens et les fonds des numéros, notes et index. Le texte sur
+ces fonds est blanc pour préserver le contraste. La couverture reste
+monochrome. Les couleurs restent personnalisables par les paramètres YAML
+`color` et `bgcolor` de ce template ; choisir des fonds foncés pour le texte blanc.
+
 Choisir le fichier selon ce que l’on veut changer :
 
 | Modification | Point de départ |
