@@ -7,7 +7,7 @@ book:
 chords:
   show: true
   diagrampage: none
-  diagramreminder: none
+  diagramreminder: all
   repeatchords: false
   lilypond: false
   tablatures: true
@@ -51,6 +51,7 @@ content:
 - song: tempo/Le monde m'appelle.sg
 - song: le_livre_de_la_jungle/Être un homme comme vous.sg
 - song: le_livre_de_la_jungle/Il en faut peu pour être heureux.sg
+- song: jacques_sevin/chant de la promesse.sg
 - song: chants_liturgiques/qu exulte tout l univers.sg
 template:
   default.tex:
