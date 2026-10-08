@@ -5,6 +5,8 @@ Les carnets utilisent Raleway pour les titres et Sarabun pour les paroles,
 les accords et le texte courant. Les polices et leurs licences sont incluses
 dans `fonts/` ; leur configuration se trouve dans `templates/songbook/data.tex`.
 
+Les changements du carnet sont consignés dans le [changelog](CHANGELOG.md).
+
 Pour lancer la génération du carnet de chants, activer l’environnement puis exécuter :
 
 Rendez compil.sh exécutable :
@@ -70,6 +72,35 @@ Le titre affiché dans le carnet est défini par `\beginsong{Titre du chant}`
 à l’intérieur du fichier. Le nom du fichier ne définit pas ce titre.
 Dans les commandes du terminal, entourer les chemins contenant des espaces
 de guillemets.
+
+## Diagrammes d’accords de guitare
+
+Les 14 chants de `books/selection.yaml` utilisent des diagrammes dont les
+24 positions sont définies dans
+[`templates/styles/guitar-diagrams.sty`](templates/styles/guitar-diagrams.sty).
+Le template `data.tex` charge ce fichier commun.
+
+Pour afficher un diagramme dans un chant, placer sa référence après les
+informations du chant et avant le premier couplet ou refrain :
+
+```tex
+\chorddiagram{Am}
+\chorddiagram{C}
+```
+
+Pour ajouter ou modifier une position, éditer sa déclaration dans le fichier
+commun :
+
+```tex
+\DeclareGuitarDiagram{Am}{X02210}
+```
+
+La modification s’applique à tous les chants qui référencent cet accord.
+Un chant peut toujours définir une position particulière avec `\gtab`.
+L’option `chords.diagramreminder: all` du YAML affiche les diagrammes ;
+`tablatures: true` concerne les tablatures musicales, distinctes des diagrammes.
+
+Voir [DOCS.md](DOCS.md) pour les détails des templates et des réglages.
 
 ## Quitter l’environnement
 

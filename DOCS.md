@@ -223,3 +223,10 @@ pour permettre l’utilisation des commandes internes contenant `@`.
 Dans les deux cas, suivre la commande jusqu’à sa définition dans le style
 explique le comportement : le pied de page exige une commande définie, tandis
 que la ligne du mail possède sa propre logique d’affichage.
+
+Les chants de `books/selection.yaml` utilisent `\chorddiagram{Am}` pour
+sélectionner les diagrammes à afficher. Les positions sont centralisées dans
+`templates/styles/guitar-diagrams.sty`, avec des déclarations comme
+`\DeclareGuitarDiagram{Am}{X02210}`. Une modification dans ce fichier met à
+jour tous les chants qui utilisent ce diagramme. Les autres chants peuvent
+continuer à définir une position spécifique avec `\gtab`.
