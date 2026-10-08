@@ -27,22 +27,27 @@ schema:
     author:
       type: //str
   optional:
+    listeauteurs: //bool
     classoptions:
       type: //arr
       contents: //str
 default:
   en:
+    listeauteurs: true
     title: "Guitar songbook"
     author: "The Patacrep Team"
   fr:
+    listeauteurs: true
     title: "Recueil de chansons pour guitare"
     author: "L'équipe Patacrep"
 description:
   en:
+    listeauteurs: "Display the author index"
     title: "Title"
     author: "Author"
     classoptions: "LaTeX class options"
   fr:
+    listeauteurs: "Afficher la liste des auteurs"
     title: "Titre"
     author: "Auteur"
     classoptions: "Options de la classe LaTeX"
@@ -94,7 +99,9 @@ description:
 
 (* block index *)
 \showindex{\songindexname}{titleidx}
+(* if _template["default.tex"].listeauteurs *)
 \showindex{\authorindexname}{authidx}
+(* endif *)
 (* endblock *)
 
 (* block chords *)
@@ -106,4 +113,3 @@ description:
 \fi
 \setcounter{songnum}{1}%
 (* endblock *)
-

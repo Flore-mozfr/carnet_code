@@ -102,6 +102,21 @@ L’option `chords.diagramreminder: all` du YAML affiche les diagrammes ;
 
 Voir [DOCS.md](DOCS.md) pour les détails des templates et des réglages.
 
+## Afficher ou masquer la liste des auteurs
+
+Dans le YAML du carnet, l’option `listeauteurs` se place sous
+`template.default.tex` :
+
+```yaml
+template:
+  default.tex:
+    listeauteurs: false
+```
+
+Utiliser `true` pour afficher la liste des auteurs et `false` pour la masquer.
+Elle reste affichée par défaut si l’option est absente. La sélection actuelle
+la masque ; les noms des auteurs sous les titres des chants restent affichés.
+
 ## Quitter l’environnement
 
 Pour quitter l’environnement :

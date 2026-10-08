@@ -55,6 +55,7 @@ content:
 - song: chants_liturgiques/qu exulte tout l univers.sg
 template:
   default.tex:
+    listeauteurs: false
     title: Carnet de chants - WEG automne 2026
     author: Groupe Joséphine Baker
   patacrep.tex:
