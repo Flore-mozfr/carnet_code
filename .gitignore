@@ -10,6 +10,8 @@ dist
 *.sxc
 *.log
 *.out
+# Ignorer uniquement les PDF générés à la racine du dépôt.
+/*.pdf
 *.pyc
 *.fdb_latexmk
 *.fls
