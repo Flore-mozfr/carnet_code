@@ -10,9 +10,6 @@ dist
 *.sxc
 *.log
 *.out
-*.pdf
-# Autoriser les PDF à la racine du dépôt.
-!/*.pdf
 *.pyc
 *.fdb_latexmk
 *.fls
