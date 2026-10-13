@@ -19,6 +19,36 @@ Puis exécutez :
 ./compil.sh
 ```
 
+Pour générer tous les fichiers `.yaml` et `.yml` de `books/`, utiliser le
+script dédié :
+
+```bash
+bash compil-all.sh
+```
+
+Les PDF sont copiés dans `dist/`. LuaLaTeX doit être installé sur la machine.
+
+## Télécharger et publier les carnets
+
+Les PDF sont disponibles dans la [release Carnets](https://github.com/Flore-mozfr/carnet_code/releases/tag/carnets),
+créée lors de la première génération réussie sur GitHub.
+
+La génération se lance uniquement à la demande :
+
+1. Ouvrir l’onglet **Actions** du dépôt.
+2. Sélectionner **Générer les carnets**, puis **Run workflow**.
+3. Choisir la branche à compiler et lancer le workflow.
+
+Le workflow doit être présent sur la branche par défaut pour proposer le
+bouton de lancement manuel. Après compilation de tous les carnets, il met
+à jour la même release `carnets` en remplaçant les PDF de même nom.
+Les notes de la release indiquent le commit compilé et le lien vers la génération.
+Un carnet retiré de `books/` doit aussi être retiré manuellement des fichiers
+de la release si son ancien PDF ne doit plus être proposé.
+
+Si une compilation échoue, la publication n’est pas lancée et les logs LaTeX
+sont disponibles pendant sept jours dans les artifacts de l’exécution.
+
 ## Créer et activer l’environnement Python
 
 Avec Python 3 installé, créer un environnement virtuel depuis la racine du
