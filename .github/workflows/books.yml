@@ -1,0 +1,87 @@
+name: Générer les carnets
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publish-carnets
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Installer LuaLaTeX et les dépendances TeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            texlive-luatex texlive-latex-extra texlive-fonts-recommended \
+            texlive-lang-french texlive-lang-european texlive-music
+
+      - name: Installer les dépendances Python
+        run: python -m pip install -r requirements.txt
+
+      - name: Générer tous les carnets
+        run: bash compil-all.sh
+
+      - name: Conserver les logs en cas d'échec
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: logs-latex
+          path: '*.log'
+          if-no-files-found: ignore
+          retention-days: 7
+
+      - name: Conserver les PDF pour la publication
+        uses: actions/upload-artifact@v4
+        with:
+          name: carnets
+          path: dist/*.pdf
+          if-no-files-found: error
+          retention-days: 7
+
+  publish:
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: carnets
+          path: dist
+
+      - name: Mettre à jour la release Carnets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          cat > release-notes.md <<EOF
+          PDF générés à la demande depuis le commit ${GITHUB_SHA}.
+
+          Génération : https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}
+
+          Cette release est réutilisée à chaque génération ; les PDF de même nom sont remplacés.
+          EOF
+
+          if gh release view carnets >/dev/null 2>&1; then
+            gh release upload carnets dist/*.pdf --clobber
+            gh release edit carnets --title "Carnets" --notes-file release-notes.md
+          else
+            gh release create carnets dist/*.pdf \
+              --target "$GITHUB_SHA" \
+              --title "Carnets" --notes-file release-notes.md
+          fi
